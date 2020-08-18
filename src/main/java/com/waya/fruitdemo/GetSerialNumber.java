@@ -4,6 +4,8 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class GetSerialNumber {
 	
+	GetSerialNumber() {
+	}
 	
 	public static String getStandName() {
 		return Constants.STAND_NAME + "_" + getRandomStandName();
