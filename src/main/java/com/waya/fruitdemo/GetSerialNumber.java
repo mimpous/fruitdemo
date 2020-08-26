@@ -4,7 +4,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class GetSerialNumber {
 	
-	GetSerialNumber() {
+	GetSerialNumber() {				
 	}
 	
 	public static String getStandName() {
