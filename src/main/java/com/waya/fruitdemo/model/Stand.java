@@ -44,5 +44,9 @@ public class Stand {
 	public String toString() {
 		return "\n Stand [standId=" + standId + ", baskets=" + baskets + ", getSum()=" + getSum() + "]";
 	}
+	
+	public void removeBasketFromListForFruit(Fruits fruit ) {
+		//getBaskets().removeIf( e -> e.)
+	}
  
 }
