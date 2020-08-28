@@ -1,28 +1,24 @@
 package com.waya.fruitdemo.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Basket {
 
-	List<Fruits> fruits;
+	//List<Fruits> fruits;
+	private Fruits fruit;
 	
 	public Basket( Fruits aFruit ) {  
-		getFruits().add( aFruit );
+		fruit = aFruit ;
 	}
-
-	public List<Fruits> getFruits() {
-		if ( fruits == null ) {
-			fruits=new ArrayList<Fruits>();
-		}
-		return fruits;
+ 
+	public Fruits getFruit() {
+		return fruit;
 	}
-
+ 
+ 
 	@Override
 	public String toString() {
-		return "Basket [ fruits=" + fruits  + "] " ;
+		return "Basket [ fruit=" + fruit  + "] " ;
 	}
 	public double getSumOfFruits( ) { 
-		return  fruits.stream().mapToDouble(Fruits::getPrice).sum(); 
+		return  fruit.getPrice(); 
 	} 
 }

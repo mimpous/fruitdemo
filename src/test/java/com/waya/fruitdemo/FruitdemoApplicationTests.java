@@ -1,11 +1,7 @@
 package com.waya.fruitdemo;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.util.Comparator;
-import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -53,25 +49,5 @@ class FruitdemoApplicationTests {
  		System.out.println("Scenario 1 - Stand Name : "  + firstStand.getStandName()  + ", Price : " + firstStand.getSum());
 	} 
 	
-	@Test
-	void scenarioTwoPrintWhatWeBought() {
-		//Scenario 1 - Adding a new Fruit and an extra Stand with Cheries
- 		routeGotheburgHelsinborg.addToRoute( new Stand( new Basket(new Pear(12)) ,  new Basket(new Peaches(1))) );
- 		routeGotheburgHelsinborg.addToRoute( new Stand( new Basket(new Cherries(4)) ,  new Basket(new Peaches(7))) );
- 		
- 		//check size of the list (dummy scenario only to use test case
- 		assertEquals(routeGotheburgHelsinborg.getStands().size(), 5 );
- 		
- 		
- 		//Purchase to fruit basket 		
- 		List<Stand> fruitBasket = routeGotheburgHelsinborg.getStands().stream()
- 		        .filter(a -> a.getBaskets().stream()  
- 		                .flatMap(b -> b.getFruits().stream() )  
- 		                .anyMatch(Pear.class::isInstance))  
- 		        .collect(Collectors.toList());
-
- 		System.out.println( "fruitbasket " + fruitBasket ); 
-
-	}
-	
+ 
 }

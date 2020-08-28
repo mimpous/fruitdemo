@@ -1,17 +1,15 @@
 package com.waya.fruitdemo;
 
-import java.util.concurrent.ThreadLocalRandom;
-
 public class GetSerialNumber {
 	
-	GetSerialNumber() {
+	GetSerialNumber() {				
 	}
 	
+	public static int SERIAL_NO = 1;
+	
 	public static String getStandName() {
-		return Constants.STAND_NAME + "_" + getRandomStandName();
+		return Constants.STAND_NAME + "_" + SERIAL_NO++;
 	}
-	private static int getRandomStandName() {
-		return Math.abs( ThreadLocalRandom.current().nextInt());
-	}
+	 
 
 }
